@@ -76,7 +76,7 @@ export default function Home() {
           <div>
             <p className="eyebrow">Web Developer · WordPress Specialist · SEO Expert · AI Solutions</p>
             <h1>I Build <span className="hl">High-Performance Websites</span> That Help Businesses Grow.</h1>
-            <p className="lead">I help businesses build modern websites, improve search visibility, optimise performance, and integrate intelligent digital solutions that support real business goals.</p>
+            <p className="lead">I run a mini agency with developers of every kind, SEO experts and social media managers. If you need any work of this kind — a website, SEO, or social media management — we are available. I help businesses build modern websites, improve search visibility, optimise performance, and integrate intelligent digital solutions that support real business goals.</p>
             <div className="cta-row">
               <a className="btn btn-primary" href="#work">Explore My Work</a>
               <a className="btn btn-outline" href="#contact">Let&apos;s Discuss Your Project</a>
@@ -91,6 +91,7 @@ export default function Home() {
             <div className="hero-cards">
               <div className="mini-card"><b>14 live projects</b><span>Singapore, Ireland and beyond</span></div>
               <div className="mini-card"><b>2 years</b><span>Working on Penguin Swim School&apos;s online presence</span></div>
+              <div className="mini-card"><b>50+ projects done</b><span>Websites, SEO and social media work</span></div>
             </div>
             <div className="glass-row" aria-label="How working with me works">
               <span className="glass-badge"><b>✓</b> Free preview first</span>
@@ -180,10 +181,10 @@ export default function Home() {
         <section id="about">
           <div>
             <p className="kicker">About Me</p>
-            <h2>A developer focused on websites that work for the business, not just look good.</h2>
-            <p>I am Zubair Bin Zahid, a freelance web developer. My work covers website development, social media management and SEO, with recent client work in WordPress, website revamps and cleanup, and university portals and tools.</p>
+            <h2>A mini agency focused on websites that work for the business, not just look good.</h2>
+            <p>I am Zubair Bin Zahid, owner of a mini agency. My team includes developers of every kind, SEO experts and social media managers, so whether you need a website, search visibility, or social media management, we are available for that work. My work covers website development, social media management and SEO, with recent client work in WordPress, website revamps and cleanup, and university portals and tools.</p>
             <p><strong>My philosophy is simple:</strong> build something the client can see and judge first, make it fast and easy to understand, and only then ask for payment. A website should explain the business, earn trust, and make contacting you easy.</p>
-            <p>I work with businesses in Singapore, Ireland and online, and I am comfortable taking a project from a first message through to a live site on the client&apos;s own domain.</p>
+            <p>My team and I work with businesses in Singapore, Ireland and online, and we are comfortable taking a project from a first message through to a live site on the client&apos;s own domain.</p>
           </div>
           <aside className="skill-box">
             <h3>Technical skills</h3>
