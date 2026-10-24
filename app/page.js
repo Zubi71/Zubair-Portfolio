@@ -1,146 +1,10 @@
 "use client";
 import { useState } from "react";
+import { projects, shots, filters } from "./projects-data";
 
 const WA_NUMBER = "923297708264";
 const EMAIL = "zahidzubair489@gmail.com";
 const SITE = "https://zubair.dyznoai.com/";
-
-const projects = [
-  {
-    name: "Penguin Swim School",
-    location: "Singapore",
-    category: "Swim & Fitness",
-    url: "https://www.penguinswimschool.sg/",
-    headline: "Swim Confidently at Singapore's Best Swimming School for Everyone",
-    description:
-      "A swimming school website presenting all-ages programmes, certified coaches and flexible locations across Singapore. Zubair has worked on this brand's online presence for two years.",
-    tags: ["Web Development", "SEO", "Content Structure"],
-    role: "Website and online presence work — two-year relationship",
-    caseStudy: true,
-  },
-  {
-    name: "Progressive Performance",
-    location: "Singapore",
-    category: "Swim & Fitness",
-    url: "https://www.progressiveperformance.sg/",
-    headline: "Personal Training Singapore",
-    description:
-      "A premium personal training website for busy professionals in Singapore CBD, focused on private coaching, strength, fat loss and nutrition guidance.",
-    tags: ["Web Development", "Local Business Website"],
-    role: "Portfolio project — website presented in Zubair's portfolio",
-    caseStudy: false,
-  },
-  {
-    name: "Swim Coach Certification — Penguin Academy",
-    location: "Singapore",
-    category: "Education",
-    url: "https://www.swimcoachcertification.com/",
-    headline: "Train for SSI swim teacher certification in Singapore",
-    description:
-      "An education website explaining SSI swim teacher pathways, small cohorts of 1–8 candidates, and supervised practical experience.",
-    tags: ["Web Development", "Education Website"],
-    role: "Portfolio project — website presented in Zubair's portfolio",
-    caseStudy: false,
-  },
-  {
-    name: "GlowMagzine",
-    location: "Online platform",
-    category: "Media & Tools",
-    url: "https://www.glowmagzine.com/",
-    headline: "All-in-One Free Tools Collection",
-    description:
-      "A tools and guides platform with 50+ free calculators, converters and generators. This is Zubair's own platform, not a client project.",
-    tags: ["Web Development", "Tools Platform", "SEO"],
-    role: "Own platform — built and managed by Zubair",
-    caseStudy: false,
-  },
-  {
-    name: "Aldo Handyman",
-    location: "Cork, Ireland",
-    category: "Local Trades",
-    url: "https://aldohandyman.ie/",
-    headline: "Your Local Handyman in Cork",
-    description:
-      "A local trades website for handyman and renovation services across Cork, from small repairs to full renovations.",
-    tags: ["Web Development", "Local Business Website"],
-    role: "Portfolio project — website presented in Zubair's portfolio",
-    caseStudy: false,
-  },
-  {
-    name: "Heatwise Plumbing",
-    location: "Dublin, Ireland",
-    category: "Local Trades",
-    url: "https://heatwiseplumbing.ie/",
-    headline: "Heating, Plumbing & Bathroom Specialists in Dublin",
-    description:
-      "A trades website for boiler installation and repair, central heating, bathrooms and plumbing services across Dublin.",
-    tags: ["Web Development", "Local Business Website"],
-    role: "Portfolio project — website presented in Zubair's portfolio",
-    caseStudy: false,
-  },
-  {
-    name: "CreatixNow",
-    location: "Digital agency",
-    category: "Digital Agency",
-    url: "https://creatixnow.com/",
-    headline: "We Are The Best Digital Agency For your Business",
-    description:
-      "A digital agency website presenting SEO, social media management, video editing, web development, Shopify and graphic design services, with a full homepage from hero to contact form.",
-    tags: ["Web Development", "Digital Agency Website"],
-    role: "Portfolio project — website presented in Zubair's portfolio",
-    caseStudy: false,
-  },
-  {
-    name: "Penguin Swim School — School Workspace",
-    location: "Singapore",
-    category: "Swim & Fitness",
-    url: "https://app.penguinswimschool.sg/",
-    headline: "Sign in to Penguin",
-    description:
-      "A school workspace sign-in experience for Penguin Swim School, with the brand's confidence, safety and structured-progression messaging. The sign-in email shown in the original capture has been removed from the portfolio image.",
-    tags: ["Web Development", "Portal / Workspace"],
-    role: "Portfolio project — website presented in Zubair's portfolio",
-    caseStudy: false,
-  },
-  {
-    name: "Pest Solution Melbourne",
-    location: "Melbourne, Australia",
-    category: "Local Trades",
-    url: "https://pestsolutionmelbourne.com/",
-    headline: "Pest Solution Melbourne",
-    description:
-      "A local pest control website for Greater Melbourne, with 8 specialist services, same-day response, reviews, FAQs and service-area coverage, from hero to booking form.",
-    tags: ["Web Development", "Local Business Website"],
-    role: "Portfolio project — website presented in Zubair's portfolio",
-    caseStudy: false,
-  },
-  {
-    name: "Purani Rasoi",
-    location: "India",
-    category: "Food & E-Commerce",
-    url: "https://puranirasoi.com/",
-    headline: "Every Jar Opens A Memory.",
-    description:
-      "A homemade pickle shop website with shop-by-category, best sellers, the pickle-making process, customer reviews, FAQs and trust marks, from hero to footer.",
-    tags: ["Web Development", "E-Commerce Website"],
-    role: "Portfolio project — website presented in Zubair's portfolio",
-    caseStudy: false,
-  },
-];
-
-
-const shots = {
-  "Penguin Swim School": "/images/penguin.webp",
-  "Progressive Performance": "/images/progressive.webp",
-  "Swim Coach Certification — Penguin Academy": "/images/swimcoach.webp",
-  "GlowMagzine": "/images/glow.webp",
-  "Aldo Handyman": "/images/aldo.webp",
-  "Heatwise Plumbing": "/images/heatwise.webp",
-  "CreatixNow": "/images/creatix.webp",
-  "Penguin Swim School — School Workspace": "/images/penguinapp.webp",
-  "Pest Solution Melbourne": "/images/pest.webp",
-  "Purani Rasoi": "/images/purani.webp",
-};
 
 function HomepageMock({ p, large }) {
   return (
@@ -160,15 +24,14 @@ const services = [
   { icon: "✦", title: "AI Integrations and Workflow Automation", text: "Practical AI tools such as question-answering chatbots built from your own documents.", cta: "Discuss AI" },
 ];
 
-const filters = ["All", "Swim & Fitness", "Education", "Media & Tools", "Local Trades", "Digital Agency", "Food & E-Commerce"];
+const techItems = ["Next.js", "React", "WordPress", "WooCommerce", "SEO", "Performance Optimisation", "AI Chatbots", "AI Automation", "Full Stack Development", "Frontend Development", "Backend Development", "Python", "Flask"];
 
 export default function Home() {
-  const [filter, setFilter] = useState("All");
   const [menuOpen, setMenuOpen] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", type: "", budget: "", details: "" });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("");
-  const shown = filter === "All" ? projects : projects.filter((p) => p.category === filter);
+  const shown = projects.slice(0, 6);
 
   const submit = (e) => {
     e.preventDefault();
@@ -191,7 +54,7 @@ export default function Home() {
         <div className="wrap nav">
           <a href="#home" className="logo">Zubair<span> Bin Zahid</span></a>
           <nav className="links" aria-label="Main navigation">
-            <a href="#home">Home</a><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+            <a href="#home">Home</a><a href="/work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
             <a className="btn btn-primary btn-small" href="#contact">Let&apos;s Talk</a>
           </nav>
           <button className={`menu-btn ${menuOpen ? "open" : ""}`} aria-expanded={menuOpen} aria-label={menuOpen ? "Close menu" : "Open menu"} onClick={() => setMenuOpen(!menuOpen)}>
@@ -200,7 +63,7 @@ export default function Home() {
         </div>
         <nav className={`mobile-nav ${menuOpen ? "open" : ""}`} aria-label="Mobile navigation">
           <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-          <a href="#work" onClick={() => setMenuOpen(false)}>Work</a>
+          <a href="/work" onClick={() => setMenuOpen(false)}>Work</a>
           <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
@@ -226,7 +89,7 @@ export default function Home() {
               <HomepageMock p={projects[0]} large />
             </div>
             <div className="hero-cards">
-              <div className="mini-card"><b>10 live projects</b><span>Singapore, Ireland and online</span></div>
+              <div className="mini-card"><b>14 live projects</b><span>Singapore, Ireland and beyond</span></div>
               <div className="mini-card"><b>2 years</b><span>Working on Penguin Swim School&apos;s online presence</span></div>
             </div>
             <div className="glass-row" aria-label="How working with me works">
@@ -240,9 +103,13 @@ export default function Home() {
 
         <div className="trust" aria-label="Technologies and credentials">
           <div className="trust-row">
-            <strong>Technologies I work with:</strong>
-            <span>Next.js</span><span>React</span><span>WordPress</span><span>SEO</span><span>Performance</span><span>AI Chatbots</span>
-            <strong style={{ marginLeft: "auto" }}>Portfolio:</strong><span>Singapore · Ireland · Online</span>
+            <strong className="trust-label">Technologies I work with:</strong>
+            <div className="marquee">
+              <div className="marquee-track">
+                {[...techItems, ...techItems].map((tech, i) => <span key={i} aria-hidden={i >= techItems.length}>{tech}</span>)}
+              </div>
+            </div>
+            <strong className="trust-portfolio">Portfolio:</strong><span>Singapore · Ireland · Online</span>
           </div>
         </div>
 
@@ -255,12 +122,7 @@ export default function Home() {
         <section id="work">
           <p className="kicker">Selected Work</p>
           <h2>Real websites, for real businesses.</h2>
-          <p className="sub">Each card shows a feature image of the live website. Click a project to visit the live website. No results are claimed for these projects.</p>
-          <div className="filters" role="group" aria-label="Filter projects by category">
-            {filters.map((f) => (
-              <button key={f} className="filter" aria-pressed={filter === f} onClick={() => setFilter(f)}>{f}</button>
-            ))}
-          </div>
+          <p className="sub">Showing the top 6 projects. Each card shows a feature image of the live website. Click a project to visit the live website. No results are claimed for these projects.</p>
           <div className="work">
             {shown.map((p) => (
               <article key={p.name} className="card">
@@ -280,7 +142,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          {shown.length === 0 && <p className="note">No projects in this category yet.</p>}
+          <div className="cta-row" style={{ marginTop: 24 }}><a className="btn btn-outline" href="/work">View All Projects →</a></div>
         </section>
 
         <section id="case-study">
@@ -396,7 +258,7 @@ export default function Home() {
             <p style={{ maxWidth: 420 }}>Web Developer, WordPress Specialist, SEO Expert and AI Solutions Developer — building high-performance websites that help businesses grow.</p>
           </div>
           <nav aria-label="Footer navigation">
-            <a href="#home">Home</a> · <a href="#work">Work</a> · <a href="#services">Services</a> · <a href="#about">About</a> · <a href="#contact">Contact</a>
+            <a href="#home">Home</a> · <a href="/work">Work</a> · <a href="#services">Services</a> · <a href="#about">About</a> · <a href="#contact">Contact</a>
           </nav>
           <p>© {new Date().getFullYear()} Zubair Bin Zahid · <a href={`mailto:${EMAIL}`}>{EMAIL}</a> · <a href="#home">Back to top ↑</a></p>
         </div>
