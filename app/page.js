@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { projects, shots, filters } from "./projects-data";
 
-const WA_NUMBER = "923297708264";
+const WA_NUMBER = "923294943631";
 const EMAIL = "zahidzubair489@gmail.com";
 const SITE = "https://zubair.dyznoai.com/";
 
@@ -246,7 +246,7 @@ export default function Home() {
             </div>
             <button className="btn btn-primary" type="submit">Send Project Enquiry via WhatsApp</button>
             {status && <p className={`status ${Object.keys(errors).length ? "err" : "ok"}`} role="status">{status}</p>}
-            <p className="note">Prefer email? Write to <a href={`mailto:${EMAIL}`}>{EMAIL}</a>. WhatsApp (fastest): <a href={`https://wa.me/${WA_NUMBER}`} target="_blank" rel="noreferrer">+92 329 7708264</a>. Portfolio: <a href={SITE}>{SITE}</a></p>
+            <p className="note">Prefer email? Write to <a href={`mailto:${EMAIL}`}>{EMAIL}</a>. WhatsApp (fastest): <a href={`https://wa.me/${WA_NUMBER}`} target="_blank" rel="noreferrer">+92 329 4943631</a>. Portfolio: <a href={SITE}>{SITE}</a></p>
           </form>
         </section>
       </main>
