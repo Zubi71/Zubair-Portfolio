@@ -4,7 +4,8 @@ html { scroll-behavior: smooth; }
 body { margin:0; background:var(--bg); color:var(--ink); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.6; }
 a { color:inherit; }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline:3px solid rgba(65,105,255,.35); outline-offset:2px; }
-.wrap { max-width:1120px; margin:0 auto; padding:0 20px; }
+.wrap { max-width:none; margin:0; padding:0 32px; }
+@media (min-width: 1400px) { .work { grid-template-columns:repeat(3,1fr); } }
 .skip { position:absolute; left:-9999px; }
 .skip:focus { left:16px; top:16px; background:#fff; padding:10px 14px; z-index:100; border:1px solid var(--border); }
 /* Header */
@@ -134,6 +135,7 @@ footer { border-top:1px solid var(--border); padding:32px 0 40px; color:var(--mu
   .menu-btn { display:flex; }
   .mobile-nav.open { display:block; }
   .work, .grid3, .steps, .form-grid, .hero-cards { grid-template-columns:1fr; }
+  .wrap { padding:0 20px; }
   section { padding:44px 0; }
   .hero { padding-top:40px; }
 }
