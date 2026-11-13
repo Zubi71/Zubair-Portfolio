@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -34,7 +36,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
