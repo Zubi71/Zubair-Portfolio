@@ -28,6 +28,8 @@ export default function Home() {
       <a className="skip" href="#work">Skip to work</a>
       <main className="wrap">
         <section className="hero reveal" id="home">
+          <div className="orb orb-blue" aria-hidden="true" />
+          <div className="orb orb-sky" aria-hidden="true" />
           <div>
             <p className="eyebrow">Web Developer · WordPress Specialist · SEO Expert · AI Solutions</p>
             <h1>I Build <span className="hl">High-Performance Websites</span> That Help Businesses Grow.</h1>
